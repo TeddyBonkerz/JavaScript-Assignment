@@ -3,64 +3,37 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Random Form</title>
+    <title>PayRoll Form</title>
     <style>
-        body {
-            margin-right: auto;
+        h1,
+        div {
+            text-align: center;
             margin-left: auto;
+            margin-right: auto;
+        }
+        
+        button:hover {
+            background-color: #ffd700;
+            color: black;
+            transition: 0.5s;
         }
     </style>
-    <script>
-        function calculatePay(hoursWorked) {
-            if (hoursWorked <= 40) {
-                return hoursWorked * 15;
-            } else {
-                return (40 * 15) + ((hoursWorked - 40) * 1.5 * 15);
-            }
-        }
-
-        function displayPayroll() {
-            var arr = [];
-            var i = 1;
-
-            while (true) {
-                var hours = prompt("Enter Number of hours worked for the week by Employee #" + (i) + ": \n" + "Please Enter -1 when you are finished.", 0);
-
-                hours = parseInt(hours);
-
-                if (hours == -1) {
-                    break;
-                }
-                arr.push(hours);
-                i++;
-            }
-
-            document.write("<table border=1");
-
-            document.write("<tr>");
-            document.write("<td> Employee # </td>");
-            document.write("<td> Hours Worked </td>");
-            document.write("<td> Gross Pay(in $) </td>");
-            document.write("</tr>");
-
-            for (i = 0; i < arr.length; i++) {
-                document.write("<tr>");
-                document.write("<td>" + (i + 1) + "</td>");
-                document.write("<td>" + arr[i] + "</td>");
-                document.write("<td>" + calculatePay(arr[i]).toFixed(3) + "</td>");
-                document.write("</tr>");
-            }
-
-            document.write("</table>");
-            document.write('Matching Game'.link('matching_game.html'));
-        }
-    </script>
-
+    <script src=index.js></script>
 </head>
 
 <body>
-    <p>Press the button to enter PayRoll Information in the prompt.</p>
-    <input type="button" onclick="displayPayroll()" value="Begin">
+    <h1>Classwork 8</h1>
+    <div class="disp">
+        <p>Press the button to enter PayRoll Information in the prompt.</p>
+        <button onclick="displayPayroll()"> Begin </button>
+    </div>
+
+    <div class="hwLinks">
+        <br>
+        <p> Other Homework Solutions </p>
+        <button onclick="document.location='matching_game.html'">Go to Matching Game</button>
+        <button onclick="document.location='guessing_game.html'">Go to Guessing Game</button>
+    </div>
 </body>
 
 </html>

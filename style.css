@@ -31,6 +31,13 @@ div {
     animation-play-state: paused;
 }
 
+.hwLinks,
+.header {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 @-webkit-keyframes mymove {
     from {
         left: 0px;

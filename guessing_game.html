@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Guessing Game</title>
+
+    <style>
+        body {
+            text-align: center;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        html {
+            font-family: sans-serif;
+        }
+        
+        body {
+            width: 50%;
+            max-width: 800px;
+            min-width: 480px;
+            margin: 0 auto;
+        }
+    </style>
+    <script src=guessing_game.js></script>
+</head>
+
+<body>
+    <h1>Guess The Number</h1>
+
+    <p>Guess the random number we have chosen between 1 - 100.</p>
+
+    <div class="form">
+        <label for="guessed">Enter a guess: </label>
+        <input type="text" id="guessed">
+        <input type="submit" value="Guess" id="submit" onclick="guess();">
+    </div>
+    <p id="result"> </p>
+
+    <div class="hwLinks">
+        <h1> Other Homework Solutions </h1>
+        <button onclick="document.location='matching_game.html'">Go to Matching Game</button>
+        <button onclick="document.location='guessing_game.html'">Go to Guessing Game</button>
+    </div>
+</body>
+
+</html>
